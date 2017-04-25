@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> 
+	<head>
+		<style type="text/css">
+			html, body { height: 100%; margin: 0; padding: 0;}
+			#bg {position:fixed; top:0; left:0; width:100%; }
+			#content {position:relative; z-index:1;}
+		</style>
+		<!--[if lt IE 9]>
+			<style type="text/css">
+				/* some css fixes for IE browsers */
+				html {overflow-y:hidden;}
+				body {overflow-y:auto;}
+				#bg {position:absolute; z-index:-1;}
+				#content {position:static;}
+			</style>
+		<![endif]-->
+		<title>. : {% block title %} Distribuidora {% endblock %} : .</title>
+		<!--<link href="/static/js/style.css" rel="stylesheet" type="text/css"/>
+    	<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+        -->
+	</head>
+	<body>
+		<!--<img src="/media/images/bgimage.jpg" alt="backg" id="bg" />-->
+		<div id="head">
+			{% block head %}
+			{% endblock %}
+		</div>
+		<div id="content">
+			{% block content %}
+			{% endblock %}
+		</div>
+	</body>
+	{{ value|date:"D d M Y" }}
+</html>	
